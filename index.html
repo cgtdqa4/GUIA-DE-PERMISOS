@@ -1,8 +1,86 @@
-<div class="card">
-      <h1>Procedimiento General de Ausencias</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía de Permisos Laborales y Normativa</title>
+  <style>
+    :root {
+      --bg-color: #f4f6f9;
+      --card-bg: #ffffff;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+    body { background-color: var(--bg-color); color: var(--text-main); padding: 20px; line-height: 1.5; }
+    
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .card { background: var(--card-bg); border-radius: 12px; padding: 24px; border: 1px solid var(--border); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); margin-bottom: 24px; }
+    
+    .header-action { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 15px; }
+    
+    h1, h2, h3 { color: var(--text-main); }
+    h1 { font-size: 1.6rem; margin-bottom: 0; }
+    h2 { font-size: 1.3rem; margin-bottom: 12px; }
+
+    .btn-solicitar {
+      background-color: var(--primary);
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color 0.2s ease;
+    }
+    .btn-solicitar:hover { background-color: var(--primary-hover); }
+
+    .info-box { background: #e0f2fe; border-left: 4px solid var(--primary); padding: 14px 18px; margin-top: 10px; border-radius: 4px; font-size: 0.95rem; }
+    .info-box ul { margin-left: 20px; margin-top: 8px; }
+    .info-box li { margin-bottom: 4px; }
+
+    .permiso-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9rem; }
+    .permiso-table th, .permiso-table td { border: 1px solid var(--border); padding: 12px; text-align: left; vertical-align: top; }
+    .permiso-table th { background: #f8fafc; font-weight: 600; color: var(--text-main); }
+
+    .tag-retribuido { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; background: #dcfce7; color: #15803d; margin-left: 8px; }
+    .tag-no-retribuido { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; background: #fee2e2; color: #b91c1c; margin-left: 8px; }
+
+    @media (max-width: 768px) {
+      body { padding: 10px; }
+      .card { padding: 16px; }
+      .header-action { flex-direction: column; align-items: flex-start; }
+      .btn-solicitar { width: 100%; justify-content: center; }
+      .permiso-table { font-size: 0.85rem; }
+      .permiso-table th, .permiso-table td { padding: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Pautas Generales y Enlace de Solicitud -->
+    <div class="card">
+      <div class="header-action">
+        <h1>Guía Completa de Permisos Laborales</h1>
+        <!-- Cambia "https://atoz.amazon.work" por la URL directa de solicitud que prefieras usar -->
+        <a href="https://atoz.amazon.work/time7request?source=%2Ftime" target="_blank" rel="noopener noreferrer" class="btn-solicitar">
+          <span>Solicitar Permiso / Ausencia</span> &rarr;
+        </a>
+      </div>
+
       <div class="info-box">
-        <strong>Pautas comunes para tramitar tus permisos:</strong>
-        <ul style="margin-left: 20px; margin-top: 5px;">
+        <strong>Pautas comunes para tramitar cualquier ausencia:</strong>
+        <ul>
           <li>Notificar previamente a la línea telefónica correspondiente.</li>
           <li>Enviar el justificante a la dirección asignada en un plazo máximo de <strong>3 días</strong> desde la ausencia:
             <ul>
@@ -18,33 +96,181 @@
     <!-- Tabla Permisos Retribuidos -->
     <div class="card">
       <h2>Permisos Retribuidos <span class="tag-retribuido">Retribuidos</span></h2>
-      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">Enviarlo a <strong>amzl-ausencias@amazon.com</strong> en un máximo de 3 días.</p>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">Enviar justificantes a <strong>amzl-ausencias@amazon.com</strong> en un plazo máximo de 3 días.</p>
       
-      <table class="permiso-table">
-        <thead>
-          <tr>
-            <th>Permiso</th>
-            <th>Duración</th>
-            <th>Justificante Requerido</th>
-            <th>Especificidades / Reglas de Inicio</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Bajas Médicas y Accidentes de Trabajo</strong></td>
-            <td>Tiempo prescrito en la baja. Incorporación día siguiente al alta.</td>
-            <td>No obligatorio presentar el parte desde el 1 de abril.</td>
-            <td>Turnos de noche: si el alta es el día 7 y tu jornada nocturna empieza antes de las 00:00, tu incorporación será el día siguiente.</td>
-          </tr>
-          <tr>
-            <td><strong>Cumplimiento de un Deber Inexcusable</strong></td>
-            <td>Tiempo indispensable.</td>
-            <td>Certificado acreditativo de entidad oficial.</td>
-            <td>Si percibes indemnización oficial, se descontará del salario.</td>
-          </tr>
-          <tr>
-            <td><strong>Asuntos Personales</strong></td>
-            <td>3 días / año.</td>
-            <td>No requiere justificante.</td>
-            <td>Solicitado con 7 días naturales de antelación. Se puede disfrutar en jornada completa o fracciones de hasta 2h. Sujeto a disponibilidad.</td>
-          </tr>
+      <div style="overflow-x: auto;">
+        <table class="permiso-table">
+          <thead>
+            <tr>
+              <th>Permiso</th>
+              <th>Duración</th>
+              <th>Justificante Requerido</th>
+              <th>Especificidades / Reglas de Inicio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Bajas Médicas y Accidentes de Trabajo</strong></td>
+              <td>Tiempo prescrito en la baja. Incorporación el día siguiente al alta médica.</td>
+              <td>No es obligatorio presentar el parte médico desde el 1 de abril.</td>
+              <td>Turnos de noche: si el alta es el día 7 y tu jornada nocturna empieza antes de las 00:00, tu incorporación será el día siguiente.</td>
+            </tr>
+            <tr>
+              <td><strong>Cumplimiento de un Deber Inexcusable</strong></td>
+              <td>Tiempo indispensable.</td>
+              <td>Certificado acreditativo expedido por entidad oficial.</td>
+              <td>En el supuesto de percibir una indemnización, se descontará el importe de la misma del salario al que se tuviera derecho.</td>
+            </tr>
+            <tr>
+              <td><strong>Asuntos Personales</strong></td>
+              <td>3 días / año.</td>
+              <td>No requiere justificante.</td>
+              <td>Solicitado con 7 días naturales de antelación. Se puede disfrutar por jornada completa o fracciones de hasta 2 horas. Sujeto a disponibilidad.</td>
+            </tr>
+            <tr>
+              <td><strong>Traslado de Domicilio Habitual</strong></td>
+              <td>1 día / año.</td>
+              <td>Documento acreditativo del cambio (contrato de alquiler, empadronamiento, etc.).</td>
+              <td>Preavisado con la mayor antelación posible.</td>
+            </tr>
+            <tr>
+              <td><strong>Asistencia a Exámenes Académicos/Profesionales</strong></td>
+              <td>Tiempo indispensable.</td>
+              <td>Justificante de asistencia al examen.</td>
+              <td>Para obtención de título académico o profesional.</td>
+            </tr>
+            <tr>
+              <td><strong>Matrimonio o Uniones de Hecho</strong></td>
+              <td>16 días naturales.</td>
+              <td>Certificado del Registro Público.</td>
+              <td>Empieza a contar a partir del primer día laborable desde la fecha del acto.</td>
+            </tr>
+            <tr>
+              <td><strong>Maternidad y Paternidad</strong></td>
+              <td>16 semanas.</td>
+              <td>Certificado de nacimiento + Libro de familia + Solicitud de permiso con fechas.</td>
+              <td>Disfrute hasta que el bebé cumpla 1 año. Para su disfrute en diferentes periodos, la solicitud debe hacerse con 15 días de antelación.</td>
+            </tr>
+            <tr>
+              <td><strong>Permiso de Lactancia</strong></td>
+              <td>Hasta que el bebé cumpla 9 meses.</td>
+              <td>Certificado de solicitud + Libro de familia.</td>
+              <td>3 opciones: franjas completas proporcionales a las jornadas trabajadas, 1h/día (o 2 fracciones de 30m), o reducción de 30m al inicio o final del turno. Preaviso de 15 días.</td>
+            </tr>
+            <tr>
+              <td><strong>Preparación al Parto / Adopción / Acogimiento</strong></td>
+              <td>Tiempo indispensable.</td>
+              <td>Justificante de asistencia a sesiones de preparación o formación.</td>
+              <td>Preparación al parto solo aplica a la persona progenitora gestante.</td>
+            </tr>
+            <tr>
+              <td><strong>Urgencia Médica de Menor o Dependiente (Plan de Igualdad)</strong></td>
+              <td>8 horas al año.</td>
+              <td>Justificante + certificado de parentesco.</td>
+              <td>Aplica a familiares hasta 2º grado de consanguinidad.</td>
+            </tr>
+            <tr>
+              <td><strong>Permiso Parental</strong></td>
+              <td>2 semanas adicionales.</td>
+              <td>Libro de familia.</td>
+              <td>Familias monoparentales en caso de discapacidad del hijo nacido, adoptado o acogido.</td>
+            </tr>
+            <tr>
+              <td><strong>Permiso Pebbles</strong></td>
+              <td>Hasta 4 semanas retribuidas.</td>
+              <td>Certificado de nacimiento, libro de familia y solicitud indicando fechas y concepto Pebbles.</td>
+              <td>Requisitos: 1 año de antigüedad como Blue Badge antes del nacimiento y disfrutarlo antes de que el menor cumpla 1 año. Continuado o fraccionado en 2 períodos (mínimo 1 semana).</td>
+            </tr>
+            <tr>
+              <td><strong>Fallecimiento de Parientes (hasta 2º grado)</strong></td>
+              <td>3 días laborables (4 días si requiere desplazamiento fuera de la provincia de Sevilla).</td>
+              <td>Certificado de defunción, servicios funerarios o documento oficial acreditativo.</td>
+              <td>Inicia el primer día laborable siguiente. Si ocurre en día calendarizado y se ha trabajado completo, empieza al día siguiente. Si ocurre durante la jornada y nos vamos antes, cuenta desde ese mismo día.</td>
+            </tr>
+            <tr>
+              <td><strong>Enfermedad Grave, Accidente o Hospitalización de Parientes (hasta 2º grado)</strong></td>
+              <td>5 días laborables.</td>
+              <td>Certificado de servicios hospitalarios / oficial + certificado de parentesco.</td>
+              <td>Aplica mientras dure la hospitalización. Si ocurre en descanso, inicia el primer día laborable siguiente. Incluye familiar consanguíneo de la pareja de hecho y personas convivientes.</td>
+            </tr>
+            <tr>
+              <td><strong>Intervención Quirúrgica sin Hospitalización con Reposo Domiciliario</strong></td>
+              <td>5 días laborables.</td>
+              <td>Justificante de la operación con prescripción de reposo o baja + libro de familia.</td>
+              <td>Mientras dure el reposo o baja del familiar (hasta 2º grado de consanguinidad o afinidad).</td>
+            </tr>
+            <tr>
+              <td><strong>Permiso por Fuerza Mayor</strong></td>
+              <td>Horas equivalentes a 4 jornadas laborables al año.</td>
+              <td>Certificado hospitalario u oficial + certificado de parentesco.</td>
+              <td>Motivos familiares urgentes e imprevisibles que requieran presencia inmediata.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Tabla Permisos No Retribuidos -->
+    <div class="card">
+      <h2>Permisos No Retribuidos <span class="tag-no-retribuido">No Retribuidos</span></h2>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">Enviar justificantes a <strong>DQA4-pxt@amazon.es</strong> en un plazo máximo de 3 días.</p>
+      
+      <div style="overflow-x: auto;">
+        <table class="permiso-table">
+          <thead>
+            <tr>
+              <th>Permiso</th>
+              <th>Duración</th>
+              <th>Justificante Requerido</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Visita a Médico de Cabecera / No Especialista</strong></td>
+              <td>Tiempo indispensable.</td>
+              <td>Justificante de asistencia.</td>
+            </tr>
+            <tr>
+              <td><strong>Visita a Médico Especialista (Público o Privado)</strong></td>
+              <td>Tiempo indispensable.</td>
+              <td>Justificante de asistencia.</td>
+            </tr>
+            <tr>
+              <td><strong>Acompañamiento a Cita Médica de Menor o Dependiente</strong></td>
+              <td>Tiempo indispensable.</td>
+              <td>Justificante de asistencia + Libro de familia.</td>
+            </tr>
+            <tr>
+              <td><strong>Asistencia a Enfermería del Site y Derivación a Mutua</strong></td>
+              <td>Tiempo indispensable.</td>
+              <td>Justificante de asistencia al médico de ese mismo día o justificante de urgencias.</td>
+            </tr>
+            <tr>
+              <td><strong>Renovación NIE</strong></td>
+              <td>Tiempo indispensable.</td>
+              <td>Justificante de asistencia a la cita.</td>
+            </tr>
+            <tr>
+              <td><strong>Avería de Vehículo In Itinere con Asistencia de Grúa</strong></td>
+              <td>Tiempo indispensable.</td>
+              <td>Certificado de grúa oficial.</td>
+            </tr>
+            <tr>
+              <td><strong>Accidente de Tráfico</strong></td>
+              <td>Tiempo indispensable.</td>
+              <td>Parte del accidente o parte del seguro.</td>
+            </tr>
+            <tr>
+              <td><strong>Retraso por Huelga de Transporte Público (Metro, Bus, etc.)</strong></td>
+              <td>Tiempo indispensable.</td>
+              <td>Certificado de la empresa de transporte público que corrobore la situación.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
