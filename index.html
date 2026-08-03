@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guía de Permisos Laborales</title>
+  <title>Guía de Permisos Laborales - CGT AMAZON</title>
   <style>
     :root {
+      --cgt-red: #cc0000;
+      --cgt-red-hover: #a30000;
       --bg-color: #f4f6f9;
       --card-bg: #ffffff;
       --primary: #2563eb;
@@ -16,9 +18,40 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
-    body { background-color: var(--bg-color); color: var(--text-main); padding: 20px; line-height: 1.5; }
+    body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.5; }
     
-    .container { max-width: 1100px; margin: 0 auto; }
+    /* Cabecera CGT */
+    .cgt-header {
+      background-color: var(--cgt-red);
+      color: #ffffff;
+      padding: 12px 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 24px;
+    }
+    
+    .cgt-header-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .cgt-logo-svg {
+      height: 40px;
+      width: auto;
+      fill: #ffffff;
+    }
+
+    .cgt-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px 20px 20px; }
 
     .card { background: var(--card-bg); border-radius: 12px; padding: 24px; border: 1px solid var(--border); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); margin-bottom: 24px; }
     
@@ -51,16 +84,28 @@
     .tag-no-retribuido { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; background: #fee2e2; color: #b91c1c; margin-left: 8px; }
 
     @media (max-width: 768px) {
-      body { padding: 10px; }
+      .container { padding: 0 10px 10px 10px; }
       .card { padding: 16px; }
       .header-action { flex-direction: column; align-items: flex-start; }
       .btn-solicitar { width: 100%; justify-content: center; }
       .permiso-table { font-size: 0.85rem; }
       .permiso-table th, .permiso-table td { padding: 8px; }
+      .cgt-title { font-size: 1.2rem; }
     }
   </style>
 </head>
 <body>
+
+  <!-- Cabecera Roja CGT -->
+  <header class="cgt-header">
+    <div class="cgt-header-container">
+      <!-- Logo CGT en SVG -->
+      <svg class="cgt-logo-svg" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+        <text x="10" y="45" font-family="Arial Black, Impact, sans-serif" font-size="45" font-weight="900" fill="#ffffff">CGT</text>
+      </svg>
+      <div class="cgt-title">CGT AMAZON</div>
+    </div>
+  </header>
 
   <div class="container">
     
