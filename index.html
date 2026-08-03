@@ -7,7 +7,7 @@
   <style>
     :root {
       --cgt-red: #cc0000;
-      --cgt-red-hover: #a30000;
+      --cgt-black: #111111;
       --bg-color: #f4f6f9;
       --card-bg: #ffffff;
       --primary: #2563eb;
@@ -25,7 +25,7 @@
       background-color: var(--cgt-red);
       color: #ffffff;
       padding: 12px 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
       margin-bottom: 24px;
     }
     
@@ -34,18 +34,18 @@
       margin: 0 auto;
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 16px;
     }
 
     .cgt-logo-svg {
-      height: 40px;
+      height: 48px;
       width: auto;
-      fill: #ffffff;
+      filter: drop-shadow(0px 1px 2px rgba(0,0,0,0.3));
     }
 
     .cgt-title {
-      font-size: 1.5rem;
-      font-weight: 800;
+      font-size: 1.6rem;
+      font-weight: 900;
       letter-spacing: 0.5px;
       text-transform: uppercase;
       color: #ffffff;
@@ -90,18 +90,26 @@
       .btn-solicitar { width: 100%; justify-content: center; }
       .permiso-table { font-size: 0.85rem; }
       .permiso-table th, .permiso-table td { padding: 8px; }
-      .cgt-title { font-size: 1.2rem; }
+      .cgt-title { font-size: 1.3rem; }
+      .cgt-logo-svg { height: 40px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Cabecera Roja CGT -->
+  <!-- Cabecera Roja CGT con Logo Rojo y Negro -->
   <header class="cgt-header">
     <div class="cgt-header-container">
-      <!-- Logo CGT en SVG -->
-      <svg class="cgt-logo-svg" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
-        <text x="10" y="45" font-family="Arial Black, Impact, sans-serif" font-size="45" font-weight="900" fill="#ffffff">CGT</text>
+      <!-- Logo SVG CGT Rojo y Negro -->
+      <svg class="cgt-logo-svg" viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Triángulo Rojo superior -->
+        <polygon points="0,0 160,0 0,100" fill="#cc0000" />
+        <!-- Triángulo Negro inferior -->
+        <polygon points="160,0 160,100 0,100" fill="#111111" />
+        <!-- Borde divisorio / marco sutil opcional -->
+        <rect x="0" y="0" width="160" height="100" fill="none" stroke="#ffffff" stroke-width="3"/>
+        <!-- Texto CGT superpuesto -->
+        <text x="80" y="68" font-family="Arial Black, Impact, sans-serif" font-size="48" font-weight="900" fill="#ffffff" text-anchor="middle">CGT</text>
       </svg>
       <div class="cgt-title">CGT AMAZON</div>
     </div>
