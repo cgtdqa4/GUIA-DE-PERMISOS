@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guía de Permisos Laborales y Normativa</title>
+  <title>Guía de Permisos Laborales</title>
   <style>
     :root {
       --bg-color: #f4f6f9;
@@ -22,7 +22,7 @@
 
     .card { background: var(--card-bg); border-radius: 12px; padding: 24px; border: 1px solid var(--border); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); margin-bottom: 24px; }
     
-    .header-action { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 15px; }
+    .header-action { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 0; }
     
     h1, h2, h3 { color: var(--text-main); }
     h1 { font-size: 1.6rem; margin-bottom: 0; }
@@ -42,10 +42,6 @@
       transition: background-color 0.2s ease;
     }
     .btn-solicitar:hover { background-color: var(--primary-hover); }
-
-    .info-box { background: #e0f2fe; border-left: 4px solid var(--primary); padding: 14px 18px; margin-top: 10px; border-radius: 4px; font-size: 0.95rem; }
-    .info-box ul { margin-left: 20px; margin-top: 8px; }
-    .info-box li { margin-bottom: 4px; }
 
     .permiso-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9rem; }
     .permiso-table th, .permiso-table td { border: 1px solid var(--border); padding: 12px; text-align: left; vertical-align: top; }
@@ -68,28 +64,13 @@
 
   <div class="container">
     
-    <!-- Pautas Generales y Enlace de Solicitud -->
+    <!-- Header principal con botón de solicitud -->
     <div class="card">
       <div class="header-action">
         <h1>Guía Completa de Permisos Laborales</h1>
-        <!-- Cambia "https://atoz.amazon.work" por la URL directa de solicitud que prefieras usar -->
-        <a href="https://atoz.amazon.work/myhr/category/Time_and_Leave_of_Absence/type/Leave_of_Absence" target="_blank" rel="noopener noreferrer" class="btn-solicitar">
+        <a href="https://atoz.amazon.work" target="_blank" rel="noopener noreferrer" class="btn-solicitar">
           <span>Solicitar Permiso / Ausencia</span> &rarr;
         </a>
-      </div>
-
-      <div class="info-box">
-        <strong>Pautas comunes para tramitar cualquier ausencia:</strong>
-        <ul>
-          <li>Notificar previamente a la línea telefónica correspondiente.</li>
-          <li>Enviar el justificante a la dirección asignada en un plazo máximo de <strong>3 días</strong> desde la ausencia:
-            <ul>
-              <li><strong>Permisos NO retribuidos:</strong> DQA4-pxt@amazon.es</li>
-              <li><strong>Permisos RETRIBUIDOS:</strong> amzl-ausencias@amazon.com</li>
-            </ul>
-          </li>
-          <li>Aquellas ausencias previstas (matrimonio, mudanza, etc.) requieren preaviso con la mayor antelación posible.</li>
-        </ul>
       </div>
     </div>
 
